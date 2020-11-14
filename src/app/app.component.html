@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>Various Sorting Methods</h2>
+    <div class="col-lg-12 val">
+      <div class="col-lg-8">
+        <h4 class="pt-20">Enter the Values:</h4>
+        <input class="col-lg-12" type="text" #data />
+      </div>
+      <div class="col-lg-4">
+        <h4 class="pt-20">Enter Value to search:</h4>
+        <input class="col-lg-12" type="text" #val />
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <h3 #display_val>{{asort}}</h3>
+    </div>
+    <div class="col-lg-12 ml-90 pt-20">
+      <div class="col-lg-4">
+        <label style="font-size: medium;margin-left:85px;">Complexity:O(n2)</label><br>
+          <button type="button" class="btn btn-default ml-20" (click)="sortType(data.value,'bubble')">Bubble</button>
+          <button type="button" class="btn btn-primary ml-20" (click)="sortType(data.value,'insertion')">Insertion</button>
+          <button type="button" class="btn btn-warning ml-20" (click)="sortType(data.value,'selection')">Selection</button>
+      </div>
+      <div class="col-lg-3">
+        <label style="font-size: medium;margin-left:15px;">Complexity:O(nlogn)</label><br>
+        <button type="button" class="btn btn-success ml-20" (click)="sortType(data.value,'merge')">Merge</button>
+        <button type="button" class="btn btn-info ml-20">Quick</button>
+      </div>
+      <div class="col-lg-2">
+        <label style="font-size: medium;margin-left:15px;">Complexity:O(nlogn)</label><br>
+        <button type="button" class="btn btn-success ml-20" (click)="binarySearch(val.value)">BinarySearch</button>
+      </div>
+    </div>
+  </div>
+</div>
